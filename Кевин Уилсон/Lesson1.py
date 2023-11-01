@@ -4,6 +4,9 @@ num1 = 2
 num2 = 3
 print("num1 + num2 = ", num1 + num2)
 
+str_c = len('У попа была собака')
+print(f'длина строки = {str_c}')
+
 # List - Список mutable
 # упорядоченная (order) структура данных
 shopping_list = ['breed', 'milk', 'coffee', 5]
