@@ -1,3 +1,5 @@
+import pickle
+
 num1 = 2
 num2 = 3
 print("num1 + num2 = ", num1 + num2)
@@ -62,3 +64,34 @@ capitalCities.update({'France': 'Paris'})
 
 for key in capitalCities:
     print(f'Столица {key} это {capitalCities[key]}')
+
+#num = input('Введи число: ')
+num = int(input('Введи число: '))
+print(num)
+print(type(num))
+
+file = open('data.txt', 'a')
+file.write('Эта срока добавлена в файл')
+file.close()
+
+file = open('data.txt', 'r')
+text = file.read()
+print(f'Вот что мы прочитали из файла: {text}')
+file.close()
+
+file = open('binary.dat', 'wb')
+pickle.dump('Эта строка записана побитово', file)
+file.close()
+
+file = open('binary.dat', 'rb')
+data = pickle.load(file)
+print(data)
+file.close()
+
+def factorial(n):
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+res = factorial(4)
+print(res)
